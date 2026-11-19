@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realiza tu pedido</title>
+</head>
+<body>
+    <form action="Procesar-pedido.php" method="post">
+        <h2>Pedido de pizza</h2>
+        <fieldset>
+            <legend>La pizza</legend>
+            <br>
+            <label>Ingredientes </label> <br> <br>
+                <input type="checkbox" name="queso"> Queso <br>
+                <input type="checkbox" name="Pimiento"> Pimiento <br>
+                <input type="checkbox" name="Cebolla"> Cebolla 
+                <br> <br>
+            <label>Tamaño</label>
+                <br> <br>
+                <input type="radio" name="Tamaño" required> Pequeña <br>
+                <input type="radio" name="Tamaño" required> Mediana <br>
+                <input type="radio" name="Tamaño" required> Grande <br>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de Entrega</legend>
+            <label>Nombre<input type="text" name="nombre" required></label> <br>
+            <label>Hora Entrega:<input type="time" name="Hora"></label> <br>
+            <label>Dirección<input type="text" name="Direccion" required></label> <br>
+            <label>Teléfono<input type="number" name="telefono" required></label> <br>
+            <label>E-mail <input type="email" name="Correo-E"></label> <br>
+            <label>Instrucciones especiales <br>
+                <textarea name="Ins-Es" cols="40" rows="15"></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Método de pago</legend>
+            <select name="Pago">
+                <option value="0">Efectivo</option>
+                <option value="1">VISA</option>
+                <option value="2">Bizum</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="OK">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>
