@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,40 +8,80 @@
 </head>
 <body>
     <form action="Procesar-pedido.php" method="post">
-        <h2>Pedido de pizza</h2>
+        <h1>Pedido de pizza</h1>
+        
         <fieldset>
             <legend>La pizza</legend>
-            <br>
-            <label>Ingredientes </label> <br> <br>
-                <input type="checkbox" name="queso"> Queso <br>
-                <input type="checkbox" name="Pimiento"> Pimiento <br>
-                <input type="checkbox" name="Cebolla"> Cebolla 
-                <br> <br>
-            <label>Tamaño</label>
-                <br> <br>
-                <input type="radio" name="Tamaño" required> Pequeña <br>
-                <input type="radio" name="Tamaño" required> Mediana <br>
-                <input type="radio" name="Tamaño" required> Grande <br>
+            <p><strong>Ingredientes:</strong></p>
+            <div>
+                <input type="checkbox" id="queso" name="queso" value="queso">
+                <label for="queso">Queso</label>
+            </div>
+            <div>
+                <input type="checkbox" id="pimiento" name="pimiento" value="pimiento">
+                <label for="pimiento">Pimiento</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cebolla" name="cebolla" value="cebolla">
+                <label for="cebolla">Cebolla</label>
+            </div>
+            
+            <p><strong>Tamaño:</strong></p>
+            <div>
+                <input type="radio" id="tam-pequena" name="tamano" value="pequeña" required>
+                <label for="tam-pequena">Pequeña</label>
+            </div>
+            <div>
+                <input type="radio" id="tam-mediana" name="tamano" value="mediana" required>
+                <label for="tam-mediana">Mediana</label>
+            </div>
+            <div>
+                <input type="radio" id="tam-grande" name="tamano" value="grande" required>
+                <label for="tam-grande">Grande</label>
+            </div>
         </fieldset>
+
         <fieldset>
             <legend>Datos de Entrega</legend>
-            <label>Nombre<input type="text" name="nombre" required></label> <br>
-            <label>Hora Entrega:<input type="time" name="Hora"></label> <br>
-            <label>Dirección<input type="text" name="Direccion" required></label> <br>
-            <label>Teléfono<input type="number" name="telefono" required></label> <br>
-            <label>E-mail <input type="email" name="Correo-E"></label> <br>
-            <label>Instrucciones especiales <br>
-                <textarea name="Ins-Es" cols="40" rows="15"></textarea>
-            </label>
+            <p>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required>
+            </p>
+            <p>
+                <label for="hora">Hora Entrega:</label><br>
+                <input type="time" id="hora" name="hora">
+            </p>
+            <p>
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion" required>
+            </p>
+            <p>
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required>
+            </p>
+            <p>
+                <label for="correo">E-mail:</label><br>
+                <input type="email" id="correo" name="correo">
+            </p>
+            <p>
+                <label for="instrucciones">Instrucciones especiales:</label><br>
+                <textarea id="instrucciones" name="instrucciones" cols="40" rows="5"></textarea>
+            </p>
         </fieldset>
+
         <fieldset>
             <legend>Método de pago</legend>
-            <select name="Pago">
-                <option value="0">Efectivo</option>
-                <option value="1">VISA</option>
-                <option value="2">Bizum</option>
-            </select>
+            <p>
+                <label for="pago">Selecciona pago:</label><br>
+                <select id="pago" name="pago">
+                    <option value="efectivo">Efectivo</option>
+                    <option value="visa">VISA</option>
+                    <option value="bizum">Bizum</option>
+                </select>
+            </p>
         </fieldset>
+        
+        <br>
         <input type="submit" value="OK">
         <input type="reset" value="Borrar">
     </form>
